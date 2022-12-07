@@ -36,6 +36,7 @@ public class DesignPatternsInJava {
         Map<String, String> synMap = Collections.synchronizedMap(map);
         System.out.println(synMap.get("course name"));
         System.out.println(synMap.get("grade"));
+        //factory and decorator patterns
     }
 
     public static void pattern2() {
@@ -65,6 +66,7 @@ public class DesignPatternsInJava {
         System.out.println(list);
         Collections.sort(list, comparator2);
         System.out.println(list);
+        //Strategy pattern
     }
 
     public static void pattern3() {
@@ -86,6 +88,7 @@ public class DesignPatternsInJava {
         // different ways to build the string
         String str3 = String.format("I am %s years old", 23);
         String str4 = String.valueOf(17514);
+        //builder method
     }
 
     public static void pattern4() {
@@ -98,9 +101,10 @@ public class DesignPatternsInJava {
          *
          * What is the implementation of emptyMap and emptyList?
          */
-        Runtime runtime = Runtime.getRuntime();
-        Map<String, Integer> emptyMap = Collections.emptyMap();
+        Runtime runtime = Runtime.getRuntime();//singleton
+        Map<String, Integer> emptyMap = Collections.emptyMap();//singleton(every empty map is initialized empty) or factory(using Collections.emptyMap() instead of new map())
         List<String> emptyList = Collections.emptyList();
+        /
     }
 
     public static void pattern5() {
@@ -111,6 +115,7 @@ public class DesignPatternsInJava {
          */
         List<Integer> list1 = Arrays.asList(2020, 2022);
         List<String> list3 = Arrays.asList("Malfoy", "Snap");
+        //adapter
     }
 
     public static void pattern6() {
@@ -132,6 +137,7 @@ public class DesignPatternsInJava {
         window.add(sub);
         frame.add(window);
         frame.setVisible(true);
+        //composite
     }
 
 
@@ -149,4 +155,5 @@ public class DesignPatternsInJava {
             System.out.println(iterator.next());
         }
     }
+    //iterator
 }
